@@ -12,6 +12,6 @@ public class InventoryService {
 
     public boolean isInStock(String skuCode, Integer quantity) {
         // Query -> Find an inventory for a given skucode where quantity >= 0
-        return inventoryRepository.existsBySkuCodeAndQuantityIsGreaterThenEquals(skuCode,quantity);
+        return inventoryRepository.existsBySkuCodeAndQuantityIsGreaterThanEqual(skuCode,quantity);
     }
 }
